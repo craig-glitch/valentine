@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>i love you hun❤️😘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #0f0f0f;
+      --light: #f5f5f5;
+      --accent: #c4a484; /* soft gold, professional */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--light);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+      ), url("images/photo1.jpg") center/cover no-repeat;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+    }
+
+    header span {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .letter {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #e0e0e0;
+    }
+
+    .letter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      filter: grayscale(20%);
+      transition: 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      filter: grayscale(0%);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .music-control:hover {
+      background: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- HERO -->
+  <header>
+    <h1>bryans<span>-valentine🫂</span></h1>
+  </header>
+
+  <!-- LETTER -->
+  <section>
+    <div class="letter">
+      <h2>My Love Letter for my love janice</h2>
+      <p>
+        This isn’t loud. It isn’t flashy.  
+        It’s intentional — just like how I feel about you.
+      </p>
+      <p>
+        In a world that moves fast and forgets easily,  
+        you are the pause I never want to skip.
+      </p>
+      <p>
+        Loving you feels calm. Confident. Certain.  
+        And if love had a signature style,  
+        this would be mine — written for you.
+      </p>
+      <p>
+        Always yours,<br>
+        <strong>— BRYAN</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Love photo 1">
+      <img src="images/photo2.jpg" alt="Love photo 2">
+      <img src="images/photo3.jpg" alt="Love photo 3">
+      <img src="images/photo3.jpg" alt="Love photo 4">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Yeezy Package © 2026 — Made with intention.
+  </footer>
+
+  <!-- MUSIC BUTTON -->
+  <div class="music-control" onclick="toggleMusic()">
+    ♫ Play Music
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const control = document.querySelector(".music-control");
+    let playing = false;
+
+    function toggleMusic() {
+      if (!playing) {
+        music.play();
+        control.textContent = "❚❚ Pause Music";
+      } else {
+        music.pause();
+        control.textContent = "♫ Play Music";
+      }
+      playing = !playing;
+    }
+  </script>
+
+</body>
+</html>
